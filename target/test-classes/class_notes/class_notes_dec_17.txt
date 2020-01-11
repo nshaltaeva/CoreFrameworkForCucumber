@@ -262,7 +262,7 @@ Make sure that Scenario is coming from here:
 
 import io.cucumber.core.api.Scenario;
 
-
+/Users/mdogan/CucumberFramework/CucumberCore
     @After
     public void teardown(Scenario scenario){
         //if test failed - do this

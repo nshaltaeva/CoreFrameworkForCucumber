@@ -9,73 +9,13 @@ formatter.feature({
     }
   ]
 });
-formatter.scenarioOutline({
-  "name": "Login and verify table values",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@login_ddt_3"
-    }
-  ]
-});
-formatter.step({
-  "name": "user is on the restful booker login page",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user navigates to \"\u003clink\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "verify title should be \"\u003ctitle\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "click on \"\u003cnavItem\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "verify table values \"\u003cfirst\u003e\" , \"\u003csecond\u003e\" , \"\u003cthird\u003e\"",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "drivers",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "link",
-        "title",
-        "navItem",
-        "first",
-        "second",
-        "third"
-      ]
-    },
-    {
-      "cells": [
-        "API Docs",
-        "Restful-booker",
-        "GetBookingIds",
-        "firstname",
-        "lastname",
-        "checkin"
-      ]
-    }
-  ]
-});
 formatter.scenario({
-  "name": "Login and verify table values",
+  "name": "Login Home page",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
       "name": "@F0001"
-    },
-    {
-      "name": "@login_ddt_3"
     }
   ]
 });
@@ -86,43 +26,223 @@ formatter.step({
   "name": "user is on the restful booker login page",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginStepDefinitions.userIsOnTheRestfulBookerLoginPage()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to \"API Docs\"",
+  "name": "user verify the home page subtitles",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginStepDefinitions.userVerifyTheHomePageSubtitles()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "verify title should be \"Restful-booker\"",
-  "keyword": "Then "
+  "name": "user verifies that \"API Docs\" links",
+  "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginStepDefinitions.userVerifiesThatLinks(String)"
+});
 formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "click on \"GetBookingIds\"",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "verify table values \"firstname\" , \"lastname\" , \"checkin\"",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Login Home page",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@F0001"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the restful booker login page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userIsOnTheRestfulBookerLoginPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user verify the home page subtitles",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userVerifyTheHomePageSubtitles()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user verifies that \"Website\" links displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userVerifiesThatLinksDisplayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Login as (data table example)",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@F0001"
+    },
+    {
+      "name": "@data_table_map"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the restful booker login page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userIsOnTheRestfulBookerLoginPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user log in with following credentials",
+  "rows": [
+    {
+      "cells": [
+        "link1",
+        "API Docs"
+      ]
+    },
+    {
+      "cells": [
+        "link2",
+        "Website"
+      ]
+    }
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userLogInWithFollowingCredentials(String,String\u003e)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "DDT example, Login as \u003crole\u003e",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@data_table_array"
+    }
+  ]
+});
+formatter.step({
+  "name": "user is on the restful booker login page",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user logs website as \"\u003clinks\u003e\"",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "roles",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "links"
+      ]
+    },
+    {
+      "cells": [
+        "API Docs"
+      ]
+    },
+    {
+      "cells": [
+        "Website"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "DDT example, Login as \u003crole\u003e",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@F0001"
+    },
+    {
+      "name": "@data_table_array"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the restful booker login page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userIsOnTheRestfulBookerLoginPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user logs website as \"API Docs\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinitions.userLogsWebsiteAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "DDT example, Login as \u003crole\u003e",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@F0001"
+    },
+    {
+      "name": "@data_table_array"
+    }
+  ]
 });
